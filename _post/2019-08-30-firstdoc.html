@@ -1,0 +1,33 @@
+---
+　　layout: default
+　　title: 你好，世界
+　　---
+　　<h2>{{ page.title }}</h2>
+　　<p>我的第一篇文章</p>
+　　<p>{{ page.date | date_to_string }}</p>
+<p>MongoDB在win7上的安装（精简版）
+1、下载mongdb的zip文件，解压后会发现有bin文件夹，在同层目录下建一个data目录，
+
+2、在data目录下建一个log和db文件夹，
+
+3、在log文件下建一个MongoDB.log 文件
+
+4、指定db和log路径命令如下：(在bin文件夹下使用控制台操作)
+
+　　> cd C:\Program Files\mongodb\bin
+
+　　> C:\Program Files\mongodb\bin>mongod --dbpath "C:\Program Files\mongodb\data\db" --logpath "C:\Program Files\mongodb\data\log\MongoDB.log" --install --serviceName "MongoDB"
+
+　　这里MongoDB.log就是开始建立的日志文件，--serviceName "MongoDB" 服务名为MongoDB
+
+5、启动服务：
+
+　　> net start MongoDB
+
+　　停用服务
+
+　　> net stop MongoDB
+
+6、卸载服务：
+
+　　> C:\Program Files\mongodb\bin>mongod --dbpath "C:\Program Files\mongodb\data\db" --logpath "C:\Program Files\mongodb\data\log\MongoDB.log" --remove --serviceName "MongoDB"  </p>
